@@ -7928,7 +7928,13 @@ header.fixed .nav_text {
   margin-right: 18px;
   background: url(member.png) no-repeat center;
 }
-
+.btn_new_member {
+  float: left;
+  width: 38px;
+  height: 38px;
+  margin-right: 18px;
+  background: url(member_stamp.jpg) no-repeat center;
+}
 .btn_cart {
   position: relative;
   float: left;
@@ -8966,6 +8972,12 @@ footer {
     right: 0;
   }
   .btn_member {
+    width: 50px;
+    height: 60px;
+    margin: 0;
+    background-size: auto 34%;
+  }
+  .btn_new_member {
     width: 50px;
     height: 60px;
     margin: 0;
