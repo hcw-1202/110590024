@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <!-- Google Tag Manager-->
+    <script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PGQ9WQT');
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+		<if//www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div id="app">
+		<h1>Firebase 第三方登入 - Google、FB</h1>
+		<hr/>
+		<h2>Google</h2>
+		<h3>選擇登入方式</h3>
+		<div>
+			<input id="g-popup" type="radio" name="googleType" value="popup" checked="checked"/>
+			<label for="g-popup">Popup</label>
+		</div>
+		<div>
+			<input id="g-redirect" type="radio" name="googleType" value="redirect"/>
+			<label for="g-redirect">Redirect</label>
+		</div>
+		<h3>點擊登入</h3>
+		<button id="google" type="button">Google 登入</button>
+		<pre><code id="googleCode">登入完後的資料會出現在這</code></pre>
+		<pre><code id="googleError">有錯誤的話會出現在這</code></pre>
+		<hr/>
+
+
+
+
+	<!--
+      <h2>Facebook</h2>
+      <h3>選擇登入方式</h3>
+      <div>
+        <input id="fb-popup" type="radio" name="fbType" value="popup" checked="checked"/>
+        <label for="fb-popup">Popup</label>
+      </div>
+      <div>
+        <input id="fb-redirect" type="radio" name="fbType" value="redirect"/>
+        <label for="fb-redirect">Redirect</label>
+      </div>
+      <h3>點擊登入</h3>
+      <button id="fb" type="button">Facebook 登入</button>
+      <pre><code id="fbCode">登入完後的資料會出現在這</code></pre>
+      <pre><code id="fbError">有錯誤的話會出現在這</code></pre>
+      <hr/>
+	-->
+
+
+		<section id="out">
+			<h2>登出 / 刪除</h2>
+			<button id="signOut" type="button">登出</button>
+			<button id="deleteUser" type="button">刪除我的帳號</button>
+			<pre><code id="userError">登出、刪除有錯誤的話會出現在這</code></pre>
+			<hr/>
+		</section>
+	</div>
+		<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+		<script>
+			var firebaseConfig = {
+				apiKey: "AIzaSyD-A2cXrfJrybfqMsopn43OTEy-WmBwjKY",
+				authDomain: "elegal-dealer.firebaseapp.com",
+				projectId: "elegal-dealer",
+				storageBucket: "elegal-dealer.appspot.com",
+				messagingSenderId: "874087561629",
+				appId: "1:874087561629:web:3f05c0baa482b96cf75774",
+				measurementId: "G-5N59KBLNGH"
+			};
+			firebase.initializeApp(firebaseConfig);
+		</script>
+		<script src="temp.js"></script>
+	</body>
+</html>

@@ -219,13 +219,27 @@
     </div>
     
     <div class="nav_search">
-        <div class="search_box">
-        <form id="searchForm" action="https://www.google.com/search?q=">
-        <input type="text" name="keyword" value="" placeholder="例) 咖啡杯">
-        <div class="search_submit" onclick="document.getElementById('searchForm').submit();"></div>
-        </form>
+        <div class="search_box">                 
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="..." aria-label="Search through site content">
+            </form>
+
+            <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=';
+        
+                function submitted(event) {
+                    event.preventDefault();
+                    const url = google + q.value;
+                    const win = window.open(url, '_blank');
+                    win.focus();
+                }
+        
+                f.addEventListener('submit', submitted);
+            </script>
         </div>
-        </div>
+    </div>
     <div class="m_menu_bg"></div>
     </header>
     <div class="container new_goods_container">
@@ -291,97 +305,98 @@
     
     
     <div class="container about_us_container">
-    <div class="about_us_tit">從黑、白到透明咖啡杯，用心對待每杯咖啡杯</div>
-    <div class="about_us_con">
-    我們在2023跨年當天，決定做出這個網站
-    <br>
-    以決不放棄做為宗旨。
-    </div>
+        <div class="about_us_tit">從黑、白到透明咖啡杯，用心對待每杯咖啡杯</div>
+        <div class="about_us_con">
+        我們在2023跨年當天，決定做出這個網站
+        <br>
+        以決不放棄做為宗旨。
+        </div>
     </div>
     <footer>
-    <div class="footer_top">
-    <div class="ft_container">
-    <div class="ft_box">
-    <div class="ft_ico">
-    <img src="phone.png">
-    </div>
-    <div class="ft_tit">聯絡我們</div>
-    <div class="ft_con">
-    如對有關商品、商品配送及退換貨有任何問題，<br>您可以透過客服專線與我們聯繫，將有專人為您服務。
-    <div class="ft_phone">02-878-6969</div>
-    營業時間 / 週一 ~ 週五 11：00~18：00
-    </div>
-    </div>
-    </div>
-    
-    <div class="ft_container">
-    <div class="ft_box">
-    <div class="ft_ico">
-    <img src="mail.jpg"> 
-    </div>
-    <div class="ft_tit">線上快速客服</div>
-    <div class="ft_con">
-    請利用以下表單輸入您的資料及問題，<br>我們將會以最快的速度回覆您。
-    </div>
-    <div class="ft_btn">
-    <a href="https://www.hhtjim.com/wp-content/uploads/2017/02/T-RexGame.html" class="b1 b1_black b1_outline b1_s">前往線上客服</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="footer_bottom">
-    <div class="inner_box">
-    <div class="f_items_box">
-    <div class="f_col">
-    <div class="f_col_tit">類別</div>
-    <div class="f_col_con">
-    <a href="https://zh.m.wikipedia.org/zh-tw/%E7%94%B7%E6%80%A7" class="fci_row">MEN'S</a>
-    <a href="https://zh.m.wikipedia.org/zh-tw/%E5%A5%B3%E6%80%A7" class="fci_row">WOMEN'S</a>
-    <a href="https://zh.m.wikipedia.org/zh-tw/%E5%84%BF%E7%AB%A5" class="fci_row">KIDS'</a>
-    <a href="https://zh.m.wikipedia.org/zh-tw/%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8" class="fci_row">SPORTS</a>
-    </div>
-    </div>
-    
-    <div class="f_col">
-    <div class="f_col_tit">購物指南</div>
-    <div class="f_col_con">
-    <a href="https://www.eilis-ai.com/latest/how-to-plan-membership/" class="fci_row">會員制度</a>
-    <a href="https://www.tokyomilkcheesetw.com/pages/inquiry-payments" class="fci_row">付款相關</a>
-    <a href="https://www.xindian.police.ntpc.gov.tw/cp-182-14033-16.html" class="fci_row">購物注意事項</a>
-    <a href="https://support.rakuten.com.tw/hc/zh-tw/articles/200805679-%E9%85%8D%E9%80%81%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B-" class="fci_row">配送相關方式</a>
-    <a href="https://www.legalaffairs.gov.taipei/News_Content.aspx?n=319EB785E9ABAD58&s=4EA2341D3F181797" class="fci_row">退換貨</a>
-    </div>
-    </div>
-    <div class="f_col">
-    <div class="f_col_tit">關於</div>
-    <div class="f_col_con">
-    <a href="https://tw.jura.com/zh-TW/About-Coffee/coffee-history" class="fci_row">咖啡起源</a>
-    <a href="https://www.cometrue-coffee.com/blog/cup-shape-size-material" class="fci_row">咖啡杯特徵</a>
-    <a href="https://www.aromacoffee2000.com/%E5%92%96%E5%95%A1%E8%B1%86%E6%8E%A8%E8%96%A6/" class="fci_row">咖啡豆怎麼看</a>
-    </div>
-    </div>
-    </div>
-    <div class="f_items_box_m">
-    <a href="https://www.baoli.championusa.com.tw/guide">用戶指南</a>
-    <a href="https://www.baoli.championusa.com.tw/about">關於Wee</a>
-    <a href="https://www.baoli.championusa.com.tw/sitemap">店鋪地圖</a>
-    </div>
-    <div class="copyright_box">
-    <img src="copyright.jpg" class="footerlogo">
-    <div class="social_media_links">
-    </div>
-    <div class="copyright">
-    台北科技大學資工二｜Copyright © 2023 NTUT CSIE,Inc. Authorized by us Inc. All Rights Reserved
-    </div>
-    </div>
-    </div>
-    </div>
+        <div class="footer_top">
+            <div class="ft_container">
+                <div class="ft_box">
+                    <div class="ft_ico">
+                        <img src="phone.png">
+                    </div>
+                    <div class="ft_tit">聯絡我們</div>
+                        <div class="ft_con">
+                            如對有關商品、商品配送及退換貨有任何問題，<br>您可以透過客服專線與我們聯繫，如果剛好沒人就不會接。
+                            <div class="ft_phone">02-878-6969</div>
+                            營業時間 / 週一 ~ 週五 11：00~11：12
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="ft_container">
+                <div class="ft_box">
+                    <div class="ft_ico">
+                        <img src="mail.jpg"> 
+                    </div>
+                    <div class="ft_tit">線上快速客服</div>
+                        <div class="ft_con">
+                        請利用以下表單輸入您的資料及問題，<br>我們將會以最快的速度回覆您。
+                        </div>
+                        <div class="ft_btn">
+                        <a href="https://www.hhtjim.com/wp-content/uploads/2017/02/T-RexGame.html" class="b1 b1_black b1_outline b1_s">前往線上客服</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="footer_bottom">
+            <div class="inner_box">
+                <div class="f_items_box">
+                    <div class="f_col">
+                        <div class="f_col_tit">類別</div>
+                        <div class="f_col_con">
+                            <a href="https://zh.m.wikipedia.org/zh-tw/%E7%94%B7%E6%80%A7" class="fci_row">MEN'S</a>
+                            <a href="https://zh.m.wikipedia.org/zh-tw/%E5%A5%B3%E6%80%A7" class="fci_row">WOMEN'S</a>
+                            <a href="https://zh.m.wikipedia.org/zh-tw/%E5%84%BF%E7%AB%A5" class="fci_row">KIDS'</a>
+                            <a href="https://zh.m.wikipedia.org/zh-tw/%E4%BD%93%E8%82%B2%E8%BF%90%E5%8A%A8" class="fci_row">SPORTS</a>
+                        </div>
+                    </div>
+                    <div class="f_col">
+                        <div class="f_col_tit">購物指南</div>
+                        <div class="f_col_con">
+                            <a href="https://www.eilis-ai.com/latest/how-to-plan-membership/" class="fci_row">會員制度</a>
+                            <a href="https://www.tokyomilkcheesetw.com/pages/inquiry-payments" class="fci_row">付款相關</a>
+                            <a href="https://www.xindian.police.ntpc.gov.tw/cp-182-14033-16.html" class="fci_row">購物注意事項</a>
+                            <a href="https://support.rakuten.com.tw/hc/zh-tw/articles/200805679-%E9%85%8D%E9%80%81%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B-" class="fci_row">配送相關方式</a>
+                            <a href="https://www.legalaffairs.gov.taipei/News_Content.aspx?n=319EB785E9ABAD58&s=4EA2341D3F181797" class="fci_row">退換貨</a>
+                        </div>
+                    </div>
+                    <div class="f_col">
+                        <div class="f_col_tit">關於</div>
+                        <div class="f_col_con">
+                            <a href="https://tw.jura.com/zh-TW/About-Coffee/coffee-history" class="fci_row">咖啡起源</a>
+                            <a href="https://www.cometrue-coffee.com/blog/cup-shape-size-material" class="fci_row">咖啡杯特徵</a>
+                            <a href="https://www.aromacoffee2000.com/%E5%92%96%E5%95%A1%E8%B1%86%E6%8E%A8%E8%96%A6/" class="fci_row">咖啡豆怎麼看</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f_items_box_m">
+                    <a href="https://www.baoli.championusa.com.tw/guide">用戶指南</a>
+                    <a href="https://www.baoli.championusa.com.tw/about">關於Wee</a>
+                    <a href="https://www.baoli.championusa.com.tw/sitemap">店鋪地圖</a>
+                </div>
+                <div class="copyright_box">
+                <img src="copyright.jpg" class="footerlogo">
+                <div class="social_media_links">
+                </div>
+                <div class="copyright">
+                    台北科技大學資工二｜Copyright © 2023 NTUT CSIE,Inc. Authorized by us Inc. All Rights Reserved
+                </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="https://www.baoli.championusa.com.tw/js/app.js?v=20220215"></script>
     <script>
-                fbq_custom('PageView');
-            </script>
-    
+        fbq_custom('PageView');
+    </script>
     
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div><div id="tmc-app" style="position: relative;"></div><div id="tmc_highlight_box_top" class="tmc_ignore" style="z-index: 2147483646; position: absolute; border: 3px solid rgb(19, 105, 206); display: none;"></div><div id="tmc_highlight_box_left" class="tmc_ignore" style="z-index: 2147483646; position: absolute; border: 3px solid rgb(19, 105, 206); display: none;"></div><div id="tmc_highlight_box_right" class="tmc_ignore" style="z-index: 2147483646; position: absolute; border: 3px solid rgb(19, 105, 206); display: none;"></div><div id="tmc_highlight_box_bottom" class="tmc_ignore" style="z-index: 2147483646; position: absolute; border: 3px solid rgb(19, 105, 206); display: none;"></div><script type="text/javascript" id="">(function(a,e,f,g,b,c,d){a.WisePopsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.defer=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","//loader.wisepops.com/get-loader.js?v\x3d1\x26site\x3dbzpSqtoMyz","wisepops");</script></body></html>
 </html>

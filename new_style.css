@@ -5660,6 +5660,7 @@ footer .f_t_b_l_t2_row.row3 {
 }
 
 .footer_top {
+  width: auto;
   font-size: 1.1rem;
   background-color: #fff;
 }
@@ -9487,6 +9488,15 @@ footer {
     height: 30px;
     margin-top: 15px;
   }
+}
+
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
 }
 
 /*# sourceMappingURL=app.css.map */
